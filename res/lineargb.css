@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  min-height: 100vh;
+  color: white;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.big-img {
+  background: url(../images/bigimage.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* creates the effect when scrolling */
+}
+.small-img {
+  background: url(../images/smallimage.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.folder {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 100, 239, 0.5)),
+    url(../images/folder-img.jpeg) center/cover fixed no-repeat; /* shorthand */
+}

@@ -1,0 +1,193 @@
+/* clear: float properties */
+
+/* float, positioning 
+div {
+  height: 200px;
+  width: 50%;
+  float: right; /* creates column layout
+}
+
+.one {
+  background: red;
+}
+.two {
+  background: green;
+}
+.three {
+  background: blue;
+}
+.four {
+  background: yellow;
+}
+*/
+/* position : static - default, always positioned according to the normal flow,
+position: relative - position relative to its normal position.
+top bottom left right 
+position: absolute - relative to the parent with position:relative
+position:fixed - relative to viewport (screen), stay as we are scrolling
+will use other content to fill out the space
+position: sticky - toggles between relative and fixed once the position is met in the viewport - then it sticks
+needs at least one of the values top, left, bottom, right */
+/* 
+div {
+ background: yellow;
+  margin-top: 40px;
+   position: relative;
+}*/
+.navbar {
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: sticky;
+  margin-top: 0;
+  top: 20px;
+  left: 0;
+  width: 100%;
+}
+.pone {
+  background: blue;
+  color: white;
+  /*  position: relative;
+   top: 200px; 
+  bottom: 2rem;
+  right: 40px; /*relative to its original position
+  position: absolute;
+  top: 0;
+  left: 0; */
+}
+.ptwo {
+  background: green;
+  color: white;
+}
+.special {
+  background: pink;
+  font-size: 20px;
+  color: #222;
+  /*  top: 0;
+  bottom: 0; */
+}
+.container {
+  min-height: 100vh;
+  background: blue;
+}
+/* Media Queries
+Responsive design
+Style elements on different screen sizes
+min-width: --- starting from
+max width: --- up to
+Mobile First */
+/* body {
+ background: yellow;
+}
+/*.banner {
+   background: blue;
+} */
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 576px) {
+  body {
+    background: white;
+  }
+  /*    
+  .banner {
+  background: yellow;
+  } */
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+/* z-index  ---- z-axis - how close to the user each element is.
+0 - default
+does not work on position: static;
+
+img {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+}
+*/
+.banner {
+  margin: 20px;
+  width: 80vw;
+  height: 70vh;
+  border: 5px solid green;
+  position: relative;
+}
+.oneimg {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.twoimg {
+  top: 10%;
+  left: 10%;
+}
+.threeimg {
+  top: 20%;
+  left: 20%;
+}
+/* ::before ::after pseudo-elements creates element and inserts before and after CONTENT
+content:'' - required
+img --- does not work */
+p::before {
+  /* pseudo element */
+  content: "pseudo element";
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  display: block;
+}
+P::after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background: black;
+  color: blue;
+  display: block;
+}
+div {
+  width: 70vw;
+  margin: 100px auto;
+  position: relative; /* makes border work from below */
+}
+img {
+  /* cannot put pseudo element */
+  width: 100%;
+  display: block;
+}
+div::before {
+  content: "";
+  border: 2px solid grey;
+  width: 100%;
+  height: 100%;
+  position: absolute; /* border finally shows up around image */
+  box-sizing: border-box; /* makes border fit image pefectly */
+  top: -40px;
+  left: -40px;
+  z-index: -2; /* puts it behind image */
+  transition: all 0.5s linear; /* hover effect */
+}
+div::after {
+  /*creates fill for border box */
+  content: "";
+  background: rgba(128, 128, 128, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear; /* hover effect */
+}
+div:hover::after, /* adds hover effect */
+div:hover::before {
+  top: 0;
+  left: 0;
+}

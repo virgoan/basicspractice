@@ -1,0 +1,384 @@
+/* Selector         html tag*/
+h1 {
+  color: black;
+  font-size: 80px; /* CSS Rule      { property: value; } */
+  font-family: "Lexend", sans-serif; /* font stack - fallback system for fonts supported by users browser */
+}
+/* UNITS
+PIXELS - absolute values, one dot on the screen
+FONT-SIZE - size of the font
+WIDTH - width of an element
+HEIGHT - height of an element */
+h2 {
+  font-size: 20px;
+  color: red;
+  width: 600px; /* PX - unresponsive (regardless of screen size), absolute value */
+  background-color: #ffffff;
+}
+/* % - percent. RELATIVE UNIT/VALUE. Depends on the parent */
+.outer {
+  width: 400px;
+  height: 300px;
+  background: white;
+}
+.inner {
+  width: 50%;
+  height: 50%;
+  background: red;
+}
+h3 {
+  color: green; /* Declaration block */
+}
+h4, /* grouping selectors */
+h5,
+h6 {
+  font-size: 1.5rem;
+  background: red;
+  color: purple;
+}
+/* ID SELECTORS       TODO: unsure of the real difference between id & class*/
+#title {
+  color: grey;
+  background-color: antiquewhite;
+}
+#subheading {
+  color: grey;
+  font-size: 14px;
+}
+/* CLASS SELECTORS */
+/* UNIT - em - RELATIVE, depends on parent
+1em = 16px default browser style
+1em base value (16px) * number (1) = 16px
+2em base value (16px) * number (2) = 32px
+2em base value (10px) * number (2) = 20px */
+.absolute {
+  font-size: 32px;
+}
+.relative {
+  /* parent is DIV, values relative to DIV */
+  font-size: 2em;
+}
+/* rem UNIT - RELATIVE, depends on root
+1 rem = base value (16px) * number (1) 
+user can change value via their browser settings / we can change value of root elements in stylesheet, does not depend on parent*/
+html {
+  font-size: 10px;
+}
+.green {
+  color: green;
+  font-size: 2rem;
+}
+.red {
+  color: red;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+/* DIV AND SPAN - USED FOR GROUPING */
+/* DIV - used to group multiple elements */
+/* SPAN- used to group inline content */
+div {
+  color: white;
+  font-size: 1.3rem;
+  margin: 10px;
+}
+span {
+  text-transform: uppercase;
+}
+.text {
+  background-color: white;
+  color: blue;
+}
+/* INHERITANCE */
+/* Child tags inherit styles from the parent tags, unless their own styles are defined. */
+/* CSS BOX MODEL - padding, margin, border (white space) */
+body {
+  color: black;
+  font-family: sans-serif; /* generic font - clue to browser if specified font cant be found */
+  line-height: 1.5;
+  font-size: 12px;
+  border: 3px solid black;
+  padding-top: 20px; /* padding: distance between the content and the edge of the element */
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding: 20px 60px 30px 50px; /* shorthand for all four if values would be the same, or shorthand in same order */
+  margin: 10px 10px 10px 10px; /* margin: distance between the element and the screen, or the element and the other element (distance on the sides of the element) - all elements have their own margin */
+  border: 10px 10px 10px 10px; /* sits between margin & padding */
+  border-style: solid;
+  border-width: 10px;
+  border-color: rgb(0, 0, 150);
+  border: 15px solid black; /* shorthand */
+}
+/* TYPOGRAPHY IN CSS 
+font-size - size of the fonts
+font-family - describes the font of the element 
+font-stack generic-family 'serif', 'sans-serif', 'cursive', 'fantasy', 'monospace'
+GOOGLE FONTS */
+.main {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+}
+.subhead {
+  font-style: italic;
+  font-weight: lighter;
+}
+.special {
+  color: black;
+  font-size: 14px;
+}
+/* Last rule and Specificity * Universal Selector */
+
+/* p {
+color: black;
+padding: 20%;
+text-align: center;
+border: 15px dashed white;
+border-radius: 50px; can create rounded borders 
+border-radius: 50%; completely round 
+margin-top: -50px; can put elements on top of eachother */
+
+/* CSS BOX MODEL -
+BORDER-RADIUS, NEGATIVE MARGIN */
+/* id has more specificity than class
+UNIVERSAL SELECTOR, SELECTS EVERYTHING but has the least level of specificity
+browser reset - REMOVES BROWSERS DEFAULT STYLING */
+* {
+  color: black;
+  margin: 0; /* removes default space between elements*/
+  padding: 0; /* removes default space between elements*/
+  box-sizing: border-box;
+  list-style-type: none; /* TODO: this only list tyle type that worked */
+}
+/* COLOR PROPERTIES */
+/* BACKGROUND-COLOR */
+/* COLOR NAMES  > 140 named colors */
+#first {
+  color: white; /* name of color value */
+  background-color: rgb(255, 0, 0); /* RGB RED GREEN BLUE 0-255 */
+}
+#second {
+  color: rgb(0, 0, 255);
+  background: rgb(255, 255, 255); /* can specify an image instead */
+}
+#third {
+  color: rgb(0, 0, 150);
+}
+/* RGBA A-opacity/transparency 0-1  TODO: test this out with a background image */
+#fourth {
+  color: rgb(255, 0, 0, 0.25); /* 1 solid, 0 completely transparent */
+}
+/* HSL
+HEX values $RRGGBB
+123456789 A(10)B(11)C(12)D(13)E(14)F(15)
+line-height - if number * by font size */
+body {
+  background: #f0fff3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 15px; /* absolute measurement, independent of font size */
+  line-height: 1.5; /* line height also changes depending on the font size when using just a number */
+}
+/* VIEWPORT UNITS
+vh - height - percent of the screen,
+vw - width - percent of the screen (not relative to parent or root, always dependent on resolution of the screen) */
+/* Hero */
+.hero {
+  background: green;
+  height: 100vh; /* percentage number, 100vh = 100% of the screen */
+  width: 70vw;
+}
+/* About */
+.about {
+  background: white;
+  height: 33vh;
+  width: 33vw;
+}
+/* CALC ()
+PERFORM MATH OPERATIONS + - * /
+MIX AND MATCH VALUES */
+/*navbar, list-type-type: property, descendant selectors */
+.navbar {
+  background: #f0fff3;
+  height: 10px;
+  width: calc(100vw - 50px);
+  color: white;
+  font-size: 3rem;
+  list-style-type: none; /* FIXME: doesnt work here or below, only on * selector even though this has more specificity -- link is specified below again thats why*/
+}
+ul li {
+  list-style-type: none;
+}
+.navbar li {
+  background: #f0fff3;
+  height: 10px;
+  width: calc(100vw - 50px);
+  color: white;
+  font-size: 3rem;
+  list-style-type: none;
+}
+ul li a {
+  color: green;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 10px 10px 10px 10px;
+  display: block;
+}
+
+.banner {
+  background: #626262;
+  /* height: calc(50vh - 3rem); /* must have spaces between operator and values */
+  min-height: 6rem; /* if the content does not match min height, its going to be min height anyway, otherwise follow size to end of text */
+  max-height: 90vh; /* makes way for overflow hidden / scroll once max height is hit */
+  overflow: scroll;
+}
+/* letter-spacing */
+.example {
+  background: green;
+  width: 10rem;
+  height: 25rem;
+  overflow: hidden;
+  overflow: scroll;
+  letter-spacing: 0.5em;
+}
+/* word-spacing: */
+/* text-decoration */
+.typography {
+  text-decoration: overline;
+  text-align: right;
+  text-indent: 6rem;
+  word-spacing: 10px;
+}
+/* text-transform */
+/* CSS BOX MODEL - OUTLINE, OFFSET */
+a {
+  /*display:inline-block;
+does not start a new line
+browser respects margin,width,height */
+  /* link is default DISPLAY: INLINE; */
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  background: white;
+  margin: 0 20px;
+  padding: 10px 10px 10px 10px;
+  display: inline-block; /* if you dont want your content to start a new line, but still want to specify margin width or height */
+}
+/* FIXME: cant get these properties to show up in page */
+#one {
+  border: 0.2rem solid #222;
+}
+#two {
+  outline-width: 0.2rem;
+  outline-color: rgb(255, 0, 0);
+  outline-offset: -10px;
+}
+/* DISPLAY PROPERTIES 
+ELEMENTS HAVE IT SET BY DEFAULT
+BLOCK: always starts a new line and spans full width - browser respects width/height, top/bottom margin
+INLINE: Does not start a new line and spans only content, browser does not respect width/height, top/bottom margin */
+.block {
+  /* DIV is default block */
+  background: blue;
+  color: white;
+  width: 400px;
+  margin: 0 auto;
+}
+.inline {
+  /* only takes up space of the content */
+  background: red;
+  color: white;
+  display: block; /* if we want to center inline elements, we would need to work with a parent */
+  text-align: center;
+}
+/* box-sizing:border-box
+default content-box */
+.box-1,
+.box-2,
+.box-3 {
+  width: 200px;
+  height: 200px;
+  font-size: 1.5rem;
+}
+.box-1 {
+  background: red;
+  padding: 20px;
+  box-sizing: content-box; /* ADDS padding to size of content specified above, didnt add before this line added */
+}
+.box-2 {
+  background: blue;
+  padding: 20px;
+  box-sizing: border-box; /* keeps box size as specified above  */
+}
+.box-3 {
+  background: green;
+  padding: 20px;
+}
+/* display:none - remove from the flow, hide element collapse the space
+opacity:0,visibility:hidden - hides element preserves the space */
+.none {
+  display: none;
+}
+.opacity-1 {
+  opacity: 1;
+}
+.opacity-5 {
+  opacity: 0.5; /* opacity of whole element as opposed to the color w/ rgba */
+}
+.opacity-0 {
+  opacity: 0;
+}
+.visibility {
+  visibility: hidden;
+}
+/* background images - background-repeat property - baxkground-size property - background position */
+.big-img {
+  background: url(../images/bigimage.jpeg);
+  background-position: center;
+}
+.small-img {
+  background: url(../images/smallimage.jpeg);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
+}
+.folder {
+  background: url(../images/folder-img.jpeg);
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: space;
+  background-repeat: round; /* adds repeat if theres enough space for the exact size of the image, will stretch original if not enough space for a second */
+}
+/* linear gradients */
+.gradient {
+  background: linear-gradient(to top blue, green);
+  background: linear-gradient(300deg, red, blue);
+  background: linear-gradient(
+    blue 50%,
+    red
+  ); /* solid blue untill 50%, then gradient into yellow */
+}
+/* CONTINUED ON LINEAR GRADIENT BACKGROUND CSS 
+/* CONTINUED IN POSITION.CSS */
+
+/* links - 
+:link - unvisited links with href
+:visited - visted links
+:hover - hover
+:active - as the user clicks
+a - all links */
+a {
+  display: block;
+  background: red;
+  margin: 10px;
+}
+a:link {
+  /* pseudo class */
+  color: white;
+}
+a:visited {
+  color: green;
+}
+a:active {
+  color: blue;
+}
