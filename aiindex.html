@@ -1,68 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>atelier iris</title>
-<link href="res/aitest.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div class="container">
-  <header>
-    <div class="primary_header">
-      <img src="/public_html/res/images/bannermain.jpg">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>atelier iris</title>
+    <link href="res/aitest.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="primary_header">
+          <img src="images/bannermain.jpg" />
+        </div>
+        <nav class="secondary_header" id="menu">
+          <ul>
+            <li><a href="/public_html/about.html">ABOUT</a></li>
+            <li><a href="http://atelieriris.jcink.net/index.php">forum</a></li>
+            <li><a href="palace://atelieriris.epalaces.com:9991">palace</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <h2 class="noDisplay">Main Content</h2>
+        <cont class="left_cont">
+          <h3>under construction</h3>
+          <p>
+            a hub for my coding / web building practice & graphic design. also a
+            forum coming soon.
+          </p>
+        </cont>
+        <aside class="right_cont">
+          <! START BOX !>
+
+          <!-- BEGIN CBOX - www.cbox.ws - v4 -->
+          <script>
+            // Cbox.ws Autorefresh by Black
+            // http://code.jfbs.net/?showtopic=8
+            function autorefresh(frame) {
+              frame.attr("src", frame.attr("src"));
+              setTimeout(function () {
+                autorefresh(frame);
+              }, 3000);
+            }
+
+            $(document).ready(function () {
+              target_frame = $("#cboxdiv iframe[id^=cboxmain]");
+              $("#cbox_refresh").on("click", function () {
+                autorefresh(target_frame);
+                $(this).attr("id", "cbox_refreshing");
+                $(this).html("Refreshing!");
+              });
+            });
+          </script>
+          <div
+            id="cboxdiv"
+            style="
+              position: relative;
+              margin: 0 auto;
+              width: 200px;
+              font-size: 0;
+            "
+          >
+            <div
+              style="
+                position: relative;
+                height: 300px;
+                overflow: auto;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                border: 0px solid;
+              "
+            >
+              <iframe
+                src="https://www7.cbox.ws/box/?boxid=831592&boxtag=Ccr4RO&sec=main"
+                marginheight="0"
+                marginwidth="0"
+                frameborder="0"
+                width="100%"
+                height="100%"
+                scrolling="auto"
+                allowtransparency="yes"
+                name="cboxmain3-3442874"
+                id="cboxmain3-3442874"
+              ></iframe>
+            </div>
+            <div
+              style="
+                position: relative;
+                height: 1px;
+                overflow: auto;
+                border: 0px solid;
+                border-top: 0px;
+              "
+            >
+              <a href="#" id="cbox_refresh">refresh</a>
+            </div>
+          </div>
+          <!-- END CBOX -->
+          <! END BOX !>
+        </aside>
+      </section>
+
+      <footer class="secondary_header footer">
+        <div class="copyright">atelier iris - under construction</div>
+      </footer>
     </div>
-    <nav class="secondary_header" id="menu">
-      <ul>
-		  <li><a href="/public_html/about.html">ABOUT</a></li>
-		  <li><a href="http://atelieriris.jcink.net/index.php">forum</a></li>
-		  <li><a href="palace://atelieriris.epalaces.com:9991">palace</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <h2 class="noDisplay">Main Content</h2>
-    <cont class="left_cont">
-      <h3>under construction</h3>
-      <p>a hub for my coding / web building practice & graphic design. also a forum coming soon for ya'll whod like to join in.</p>
-      <p>a palace is also in the works so if you still care for that business...</p>
-    </cont>
-    <aside class="right_cont"><! START BOX !>
-
-<!-- BEGIN CBOX - www.cbox.ws - v4 -->
-<script>
-// Cbox.ws Autorefresh by Black
-// http://code.jfbs.net/?showtopic=8
-function autorefresh(frame) {
-	frame.attr("src", frame.attr("src"));
-	setTimeout(function() {
-		autorefresh(frame);
-	}, 3000);
-}
-
-$(document).ready(function() {
-	target_frame = $("#cboxdiv iframe[id^=cboxmain]");
-	$("#cbox_refresh").on("click", function() {
-		autorefresh(target_frame);
-		$(this).attr("id", "cbox_refreshing");
-		$(this).html("Refreshing!");
-	});
-});
-</script>
-<div id="cboxdiv" style="position: relative; margin: 0 auto; width: 200px; font-size: 0;">
-<div style="position: relative; height: 300px; overflow: auto; overflow-y: auto; -webkit-overflow-scrolling: touch; border: 0px solid;"><iframe src="https://www7.cbox.ws/box/?boxid=831592&boxtag=Ccr4RO&sec=main" marginheight="0" marginwidth="0" frameborder="0" width="100%" height="100%" scrolling="auto" allowtransparency="yes" name="cboxmain3-3442874" id="cboxmain3-3442874"></iframe></div>
-<div style="position: relative; height: 1px; overflow: auto; border: 0px solid; border-top: 0px;">
-<a href="#" id="cbox_refresh">refresh</a>
-</div>
-</div>
-<!-- END CBOX -->  
-<! END BOX !></aside>
-  </section>
- 
-  <footer class="secondary_header footer">
-    <div class="copyright">atelier iris - under construction</div>
-  </footer>
-</div>
-</body>
+  </body>
 </html>

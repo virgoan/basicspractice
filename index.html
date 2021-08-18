@@ -1,139 +1,204 @@
-<!DOCTYPE html>                        <!-- html version, not defined by a number nowadays auto html5-->
+<!DOCTYPE html>
+<!-- html version, not defined by a number nowadays auto html5-->
 <html lang="en">
-<head>                                    <!-- information about the page (meta, links, title etc)-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First webpage</title>             <!-- page title-->
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>                                  <!-- what will be displayed on the page-->
-<div id="wrapper">      <!-- using a div tag allows us control of width of content inside-->
-<header>
-<p id="home">this is the top of the page</p>
-</header>
-<nav>
-    <ul>                             <!-- to open in new tab (if external link)  target="_blank"  -->
-        <li><a href="https://www.google.com">external google link</a></li>
-        <li><a href="./javascriptintro.html">basic javascript page</a></li> <!-- unordered list -->
-        <!-- single page links-->
-        <li><a href="#bgimage">image on this page</a></li>
-        <!-- image as link -->
-        <li><a href="https://www.google.com"><img src="images/favicon.png" alt="image as link to google" width="50"></a></li>
-        <!-- empty link-->
-        <li><a href="#">dummy link</a></li>
-        <li><a href="csstutorial.html">css tutorial</a></li>
+  <head>
+    <!-- information about the page (meta, links, title etc)-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First webpage</title>
+    <!-- page title-->
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <!-- what will be displayed on the page-->
+    <div id="wrapper">
+      <!-- using a div tag allows us control of width of content inside-->
+      <header>
+        <p id="home">this is the top of the page</p>
+      </header>
+      <nav>
+        <ul>
+          <!-- to open in new tab (if external link)  target="_blank"  -->
+          <li><a href="https://www.google.com">external google link</a></li>
+          <li><a href="./javascriptintro.html">basic javascript page</a></li>
+          <!-- unordered list -->
+          <!-- single page links-->
+          <li><a href="#bgimage">image on this page</a></li>
+          <!-- image as link -->
+          <li>
+            <a href="https://www.google.com"
+              ><img
+                src="images/favicon.png"
+                alt="image as link to google"
+                width="50"
+            /></a>
+          </li>
+          <!-- empty link-->
+          <li><a href="#">dummy link</a></li>
+          <li><a href="csstutorial.html">css tutorial</a></li>
+          <li><a href="practice.html">a practice page</a></li>
+          <li><a href="aiindex.html">atelier iris</a></li>
         </ul>
-</nav>
-    <h1>Hello World</h1>            <!-- white space collapsing (HTML will ignore all white space) -->
-    <p>This is my first webpage</p>
-    <p>this is text from emmet</p>
-    <br>
-    <!-- sup and sub elements-->
-    <h1>hello im <sup>1st</sup> gabrielle <sub>in town</sub></h1>
-    <br>
-    <!-- strong and em -->
-    <p>Lorem ipsum <strong>dolor sit amet consectetur adipisicing elit.</strong> Odio sapiente beatae nam, voluptate reiciendis minus autem eaque perspiciatis <em>iusto perferendis molestias quaerat qui maxime </em> culpa deleniti tempore, veritatis dolor eius.<strong>Styling via html should only be used for accessibility reasons </strong> <em> as css should handle things like this</em>.</p>
-    <br>
-    <!-- special characters -->
-    <p>copright &copy; trademark &trade; registered &reg;</p>
-    <br>
-    <ul><li>an item on the list</li>
+      </nav>
+      <h1>Hello World</h1>
+      <!-- white space collapsing (HTML will ignore all white space) -->
+      <p>This is my first webpage</p>
+      <p>this is text from emmet</p>
+      <br />
+      <!-- sup and sub elements-->
+      <h1>hello im <sup>1st</sup> gabrielle <sub>in town</sub></h1>
+      <br />
+      <!-- strong and em -->
+      <p>
+        Lorem ipsum
+        <strong>dolor sit amet consectetur adipisicing elit.</strong> Odio
+        sapiente beatae nam, voluptate reiciendis minus autem eaque perspiciatis
+        <em>iusto perferendis molestias quaerat qui maxime </em> culpa deleniti
+        tempore, veritatis dolor eius.<strong
+          >Styling via html should only be used for accessibility reasons
+        </strong>
+        <em> as css should handle things like this</em>.
+      </p>
+      <br />
+      <!-- special characters -->
+      <p>copright &copy; trademark &trade; registered &reg;</p>
+      <br />
+      <ul>
         <li>an item on the list</li>
         <li>an item on the list</li>
-        <li>an item on the list</li></ul>
-    <br>
-    <ol><li>an item on the list</li>
         <li>an item on the list</li>
         <li>an item on the list</li>
-        <li>an item on the list</li></ol>
-    <br>
-    <!-- nested list -->
-    <ul><li>an item on the list</li>
-        <li>an item on the list
-            <ol>
-                <li>an item on the list</li>
-                    <li>an item on the list</li>
-                    <li>an item on the list</li>
-                    <li>an item on the list</li>
-            </ol>
+      </ul>
+      <br />
+      <ol>
+        <li>an item on the list</li>
+        <li>an item on the list</li>
+        <li>an item on the list</li>
+        <li>an item on the list</li>
+      </ol>
+      <br />
+      <!-- nested list -->
+      <ul>
+        <li>an item on the list</li>
+        <li>
+          an item on the list
+          <ol>
+            <li>an item on the list</li>
+            <li>an item on the list</li>
+            <li>an item on the list</li>
+            <li>an item on the list</li>
+          </ol>
         </li>
         <li>an item on the list</li>
-        <li>an item on the list</li></ul>
-    <br>
-    <!-- table  tr td th-->
-    <table>
-        <tr>           <!-- table row -->
-            <th>  number     </th>         <!-- table column -->
-            <th>  name      </th>
+        <li>an item on the list</li>
+      </ul>
+      <br />
+      <!-- table  tr td th-->
+      <table>
+        <tr>
+          <!-- table row -->
+          <th>number</th>
+          <!-- table column -->
+          <th>name</th>
         </tr>
-    <tr>
-        <td>1</td>
-        <td>john</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>peter</td>
-    </tr>
-    </table>
-    <br>
-    <!-- forms -->  <!-- text input -->
-    <form action="where data is to be sent" method="how the data is going to be sent">
+        <tr>
+          <td>1</td>
+          <td>john</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>peter</td>
+        </tr>
+      </table>
+      <br />
+      <!-- forms -->
+      <!-- text input -->
+      <form
+        action="where data is to be sent"
+        method="how the data is going to be sent"
+      >
         <label for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName">
-    <br> <!-- password input -->    <!-- placeholder can be used instead of label, or value -->
-        <input type="password" name="password" id="Password" placeholder="please type your password">
-    <br> <!-- email input -->
-        <input type="email" name="email" id="email" value="email@email">        <!-- value, form would submit -->
-    <!-- input submit   <input type="submit" value="submit here"> -->
-    <br>
-    <!-- text area -->
-    <p>Description</p>
-    <textarea name="" id="" cols="25" rows="5">
-    </textarea>
-    <br>
-    <!-- radio buttons -->
-    <p>please select your favourite coding language</p> <br>
-    <input type="radio" name="coding" id=""" value="javascript">Javascript
-    <input type="radio" name="coding" id=""" value="java">Java      <!-- name to match, or can select multiple -->
-    <input type="radio" name="coding" id=""" value="python" checked>Python  <!-- can add 'checked' attribute to start with the button checked-->
-    <br>
-    <!-- checkboxes -->
-    <input type="checkbox" name="programming" value="javascript" id="">javascript
-    <input type="checkbox" name="programming" value="java" id="">java       <!-- can check multiple -->
-    <input type="checkbox" name="programming" checked value="python" id="">python
-    <br>
-    <select name="languages" id="">
-        <option value="javascript">javascript</option>
-        <option value="java">java</option>
-        <option value="python">python</option>
-    </select>
-    <!-- select input -->
-    <br>
-    <!-- or button submit below -->  
-    <button type="submit">submit here</button>   
-    </form>
-    <!-- ALT = OPTION, COMMAND = CTRL -->
-    <br>
-    <h3>learning keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h2>keyboard shortcuts</h2>
-    <h2>keyboard shortcuts</h2>
-    <h2>keyboard shortcuts</h2>
-    <h2>keyboard shortcuts</h2>
-    <h2>keyboard shortcuts</h2>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
-    <h3>keyboard shortcuts</h3>
+        <input type="text" name="firstName" id="firstName" />
+        <br />
+        <!-- password input -->
+        <!-- placeholder can be used instead of label, or value -->
+        <input
+          type="password"
+          name="password"
+          id="Password"
+          placeholder="please type your password"
+        />
+        <br />
+        <!-- email input -->
+        <input type="email" name="email" id="email" value="email@email" />
+        <!-- value, form would submit -->
+        <!-- input submit   <input type="submit" value="submit here"> -->
+        <br />
+        <!-- text area -->
+        <p>Description</p>
+        <textarea name="" id="" cols="25" rows="5"> </textarea>
+        <br />
+        <!-- radio buttons -->
+        <p>please select your favourite coding language</p>
+        <br />
+        <input type="radio" name="coding" id=""" value="javascript">Javascript
+        <input type="radio" name="coding" id=""" value="java">Java
+        <!-- name to match, or can select multiple -->
+        <input type="radio" name="coding" id=""" value="python" checked>Python
+        <!-- can add 'checked' attribute to start with the button checked-->
+        <br />
+        <!-- checkboxes -->
+        <input
+          type="checkbox"
+          name="programming"
+          value="javascript"
+          id=""
+        />javascript
+        <input type="checkbox" name="programming" value="java" id="" />java
+        <!-- can check multiple -->
+        <input
+          type="checkbox"
+          name="programming"
+          checked
+          value="python"
+          id=""
+        />python
+        <br />
+        <select name="languages" id="">
+          <option value="javascript">javascript</option>
+          <option value="java">java</option>
+          <option value="python">python</option>
+        </select>
+        <!-- select input -->
+        <br />
+        <!-- or button submit below -->
+        <button type="submit">submit here</button>
+      </form>
+      <!-- ALT = OPTION, COMMAND = CTRL -->
+      <br />
+      <h3>learning keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h2>keyboard shortcuts</h2>
+      <h2>keyboard shortcuts</h2>
+      <h2>keyboard shortcuts</h2>
+      <h2>keyboard shortcuts</h2>
+      <h2>keyboard shortcuts</h2>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
+      <h3>keyboard shortcuts</h3>
 
-    <p id="bgimage"><img src="images/inprog copy.png" alt="an image for the website"></p><br><br>
-    <a href="#home">back to top</a>
+      <p id="bgimage">
+        <img src="images/inprog copy.png" alt="an image for the website" />
+      </p>
+      <br /><br />
+      <a href="#home">back to top</a>
     </div>
-</body>
+  </body>
 </html>
